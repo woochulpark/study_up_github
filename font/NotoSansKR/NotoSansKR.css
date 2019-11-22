@@ -1,0 +1,55 @@
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Noto Sans KR Thin'), 
+    url('/font/NotoSansKR/NotoSans-Thin.eot'),
+    url('/font/NotoSansKR/NotoSans-Thin.eot?#iefix') format('embedded-opentype'),
+    url('/font/NotoSansKR/NotoSans-Thin.woff') format('woff'),
+    url('/font/NotoSansKR/NotoSans-Thin.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Noto Sans KR Light'), 
+    url('/font/NotoSansKR/NotoSans-Light.eot'),
+    url('/font/NotoSansKR/NotoSans-Light.eot?#iefix') format('embedded-opentype'),
+    url('/font/NotoSansKR/NotoSans-Light.woff') format('woff'),
+    url('/font/NotoSansKR/NotoSans-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Noto Sans KR Regular'), 
+    url('/font/NotoSansKR/NotoSans-Regular.eot'),
+    url('/font/NotoSansKR/NotoSans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/font/NotoSansKR/NotoSans-Regular.woff') format('woff'),
+    url('/font/NotoSansKR/NotoSans-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Noto Sans KR Medium'),
+    url('/font/NotoSansKR/NotoSans-Medium.eot'),
+    url('/font/NotoSansKR/NotoSans-Medium.eot?#iefix') format('embedded-opentype'),
+    url('/font/NotoSansKR/NotoSans-Medium.woff') format('woff'),
+    url('/font/NotoSansKR/NotoSans-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Noto Sans KR Bold'),
+    url('/font/NotoSansKR/NotoSans-Bold.eot'),
+    url('/font/NotoSansKR/NotoSans-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/font/NotoSansKR/NotoSans-Bold.woff') format('woff'),
+    url('/font/NotoSansKR/NotoSans-Bold.otf') format('opentype');
+}

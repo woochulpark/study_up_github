@@ -18,7 +18,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			$ch_way = $this->session->userdata['choiceway'];
 			$put_wr = $this->session->userdata['wr_session'];
-			$com_mem_code = $this->session->userdata['company_code'];		
+			$com_mem_code = $this->session->userdata['company_code'];	
+			$curr_time = date("Y-m-d H:m:s", time());	
 
 			if($mv_ch != ''){
 				
@@ -33,16 +34,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					break;
 					case 'Samsung':
 						$produ_code = "S";
-						//$locat_addr = 'https://openapi.samsungfire.com/OpenB2B2CWeb/pages/sfmi/ui/b2b2c/m/agreement/BT_KennelHndlpIntro.html?token=7526df14-d24f-46f6-857f-1539ff456eac';
-						$locat_addr = 'https://openapi.samsungfire.com/sfmi?token=203eead3-4997-453c-a446-b87370f65b4f';// 반려견 
+						
+						$locat_addr_dog = ''; //반려견 링크
+						$locat_addr_cat = ''; // 반려묘 링크
+
+						if($ch_way == "S"){
+
+							$animal_both = $this->session->userdata['choicesub'];
+							if( $animal_both == 'dog'){
+								//$animal_both_v = 'D';
+								$locat_addr = $locat_addr_dog;
+							} else {
+								//$animal_both_v = 'C';
+								$locat_addr = $locat_addr_cat;
+							}		
+
+						} else if($ch_way == "SP"){ // 개, 고양이
+							$pet_both = $this->session->userdata['choicesub'];
+							//Dog,Cat
+							if($pet_both == 'dog'){
+								//$pet_both_v = 'D';
+								$locat_addr = $locat_addr_dog;
+							} else if($pet_both == 'cat'){
+								//$pet_both_v = 'C';
+								$locat_addr = $locat_addr_cat;
+							}
+						}  else {
+							// 다른 경로들은 개로 설정되어 있기 때문에 반려견으로 함.
+							$locat_addr = $locat_addr_dog;
+						}
 					break;					
 				}
 
 
 				//print_r($this->session->userdata);
-				
-				
-				$curr_time = date("Y-m-d H:m:s", time());
 					
 				if($ch_way == "S"){// 조회 입력
 					//choicesub, prtbirth, sickboth, regboth, prtname

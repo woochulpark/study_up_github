@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				$result = $this->pet_ev_m->petEvent($ins_query);
 				if($result){
 					$insuran['Msg'] = "true";
-					$insuran['compMent'] = '이벤트 참여가 완료되었습니다.\n 감사합니다.';
+					$insuran['compMent'] = '이벤트 참여가 완료되었습니다.<br> 감사합니다.';
 					$insuran['wboth'] = 'mv';
 					$insuran['compBtn'] = '아이펫 메인';
 					echo  json_encode($insuran);

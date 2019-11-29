@@ -227,7 +227,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					if(data.Msg == "true"){
 						$("#comp_ment").text('');
 						$("#comp_btn").text('');
-						$("#comp_ment").text(data.compMent);
+						$("#comp_ment").html(data.compMent);
 						$("#comp_btn").text(data.compBtn);				
 						var btn_both = data.wboth;
 						

@@ -326,7 +326,8 @@
 	.join_note .inner > p {font-size:.825em}
 	.join_note .inner dl dd p span {color:red;font-size:1em;}
 	.promy .circle03 {right:-3em; width:6.3em} 
-	.promy .circle04 {left:-3em; width:6.3em} 	
+	.promy .circle04 {left:-3em; width:6.3em} 
+	
 }
 @media screen and (max-width:768px){
 	.floating_circle {font-size:1em}
@@ -497,14 +498,10 @@
 .anypet .circle04 {bottom:35%; left:50%; margin-left:-630px}
 /* 191111 추가*/
 .anypet_comming {position:relative; padding:140px 0 55px; text-align:center; background:#bdecf4}
-/*.anypet_comming .cloud {position:absolute; top:5px; left:0; width:100%; height:100%}
+.anypet_comming .cloud {position:absolute; top:5px; left:0; width:100%; height:100%}
 .anypet_comming .cloud1 {background:url('/img/sub/anypet_cloud.png') bottom center; background-repeat:repeat-x; opacity:.5}
 .anypet_comming .cloud2 {margin-top:20px; background:url('/img/sub/anypet_cloud.png') bottom center; background-repeat:repeat-x}
-.anypet_comming .illust {position:absolute; top:360px; left:0; width:100%}
-*/.anypet_comming .cloud {position:absolute; top:5px; left:0; width:100%; height:100%; background-repeat:repeat-x; background-position:bottom center; background-size:auto 50%}
-.anypet_comming .cloud1 {background-image:url('/img/sub/anypet_cloud.png');  opacity:.5}
-.anypet_comming .cloud2 {margin-top:20px; background-image:url('/img/sub/anypet_cloud.png')  }
-.anypet_comming .illust {position:absolute; bottom:28%; left:0; width:100%; }
+.anypet_comming .illust {position:absolute; top:105px; left:0; width:100%}
 .anypet_comming .illust .inner {padding:0 50px 0 40px; box-sizing:border-box}
 .anypet_comming .illust .dog {float:left}
 .anypet_comming .illust .cat {float:right;}
@@ -557,11 +554,9 @@
 	.anypet .prod_table_box ul li {font-size:1em}
 	.anypet .circle03 {width:6.5em; margin-right:-1em}
 	.anypet .circle04 {width:6.3em; margin-left:-3em}
-
 	.anypet_comming {padding:4.25em 0 3.8em}
-/*	.anypet_comming .cloud {background-size:auto 62%}
-	.anypet_comming .illust {top:10em}
-*/
+	.anypet_comming .cloud {background-size:auto 62%}
+	.anypet_comming .illust {top:8.15em}
 	.anypet_comming .illust .inner {padding:0 3%}
 	.anypet_comming .illust .inner img {font-size:1.5em}
 	.anypet_comming .illust .dog {width:4.4em}
@@ -578,9 +573,9 @@
 }	
 
 @media screen and (max-width:480px){
-	.anypet_comming {background:#bdecf4 url('/img/m/anypet_cloud_Bg.png') no-repeat bottom; background-size:100% auto; }
-	.anypet_comming .illust {display:none}
-	.anypet_comming .cloud {display:none}
+	.anypet_comming .illust {top:9em}
+	.anypet_comming .illust .inner img {font-size:1em}
+	.anypet_comming .cloud {background-size:auto 65%}
 }	
 
 /******************************
@@ -638,7 +633,7 @@
 	.stpe02_criteria > li.ins_coverage span {display:block; float:left; width:50%; padding-left:20px; background:url('/img/sub/icon_check.png') no-repeat center left; box-sizing:border-box}
 	.sch_step02 p {padding-left:14px; text-indent:-14px; font-size:15px; color:#e15449}
 	.nicescroll-rails {background:#fff; border:1px solid #e0e0e0; border-radius:5px}
-/*191108 수정*/.sch_step03 {position:relative; padding:50px 30px 80px; background:#f3f7f7; overflow:hidden}
+.sch_step03 {padding:50px 30px 80px; background:#f3f7f7; overflow:hidden}
 	.step03_inner {position:relative; max-width:1200px; margin:0 auto}
 	.step03_inner .step03_top {overflow:hidden}
 	.step03_inner .ins_table_btn {float:right; height:63px; padding:0 30px; border-radius:7px; cursor:pointer; border:0}
@@ -676,12 +671,9 @@
 	.step03_inner .ins_list .btn_box .btn_join.off a {color:#bcbcbc; cursor:default}
 	.step03_inner .ins_list .btn_box .btn_more a {color:#fff}
 	.step03_inner .ins_list .btn_box .join_letter span {display:inline-block; position:relative; font-size:1em; font-weight:400}
-	/*
+
 	.step03_inner .falling_figure1 {width:400px; right:-140px; bottom:auto; top:115px; background:#ffeed9}
 	.step03_inner .falling_figure2 {z-index:0; right:-70px; bottom:auto; top:300px; background:#ffc600}
-	*/
-	.sch_step03 .falling_figure1 {z-index:0; right:50%; bottom:78%; width:396px; padding-top:86px; margin-right:-750px; border-radius:50px; background:#ffeed9}
-	.sch_step03 .falling_figure2 {z-index:0; right:50%; bottom:78%; margin-bottom:-168px; width:211px; padding-top:45px; margin-right:-670px; border-radius:27px; background:#ffc600}
 	/*}*/
 	
 	/*191101 보험비교표 수정{*/
@@ -930,7 +922,6 @@ button.bo_btn {line-height:1}
 .bo_news_list li:hover {background:#f5f5f5 url('/img/sub/bo_news_list_bg_white.png') no-repeat -75px 35px; background-size:449px auto}
 .bo_news_file {font-size: 14px; border-top: 1px solid #a2a2a2;height:20px;padding: 5px 0px 8px 0px;}
 .bo_news_file a {font-size: 14px; }
-
 /*글읽기*/
 /*191101 수정*/.bo_view {border-top:2px solid #464646}
 .bo_view_hd {padding:25px 10px; border-bottom:1px solid #a2a2a2}
@@ -1054,7 +1045,6 @@ dl.wr_private_agree dd textarea {width:100%; height:140px; padding:27px; box-siz
 .bo_news_list li:hover {background:#f5f5f5 url('/img/sub/bo_news_list_bg_white.png') no-repeat -5% -20%; background-size:auto 125%}
 .bo_news_file {font-size: .85em; border-top: 1px solid #a2a2a2;height:20px;padding: 5px 0px 5px 0px;}
 .bo_news_file a  {font-size: 1em; }
-
 /*글읽기*/
 .bo_view_hd {padding:1.2em 2% 1em}
 .bo_view_hd .tit {font-size:1.25em}

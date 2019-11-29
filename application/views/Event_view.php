@@ -105,6 +105,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 </div>
 
+<div id="complete_alert">
+	<div class="pop_alert_box">
+		<div class="btn_close" onclick="pop_close_comp()"><img src="/img/skin/btn_close.png"/></div>
+		<h1 class="logo"><img src="/img/logo.png"/></h1>
+		<h2 class="txt" id="comp_ment">
+			
+		</h2>
+		<span class="btn_confirm" id="comp_btn"></span>
+	</div>
+</div>
+
 <script>
 
 	//select
@@ -127,6 +138,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		$('.sel_option').hide();
 		$('.select_box').removeClass('open');
 	})
+
+	var pop_locat  = '';
 
 	//form 필수값 체크
 	$('.btn_submit').click(function(){
@@ -192,12 +205,74 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		if(frmError > 0){
 			$('#pop_alert').css('display','block');
 		}else{
+				
 			//$('#eventForm').submit()
+				var petn = $("[name=pet_name]").val();
+				var petb = $("[name=pet_birth]").val();
+				var mbn = $("[name=mb_name]").val();
+				var mbh = $("[name=mb_hp]").val();
+				var jinsu = $("[name=insurance]").val();
+				var jstock = $("[name=policy_num]").val();
+
+				var agr = 'false';
+				
+
+				if ($("[name=agree_privacy]").is(':checked'))	{
+					agr = 'true';
+				} 
+			
+
+				$.post('/Eventp', {eve_pn:petn, eve_pb:petb, eve_mn:mbn, eve_mh:mbh, eve_insu:jinsu, eve_stock:jstock, privacy:agr}, function (data){
+					console.log(data);
+					if(data.Msg == "true"){
+						$("#comp_ment").text('');
+						$("#comp_btn").text('');
+						$("#comp_ment").text(data.compMent);
+						$("#comp_btn").text(data.compBtn);				
+						var btn_both = data.wboth;
+						
+						if(btn_both == 'mv'){
+							set_pop_path(btn_both);
+						} else {
+							set_pop_path('cl');
+						}
+
+						$("#complete_alert").css('display','block');
+					} else {
+						//prt_locate  = false;
+					}							
+
+				},"json");
 		}
 	});
+
+	$('#comp_btn').on('click',function(){
+		if(get_pop_path() == 'mv'){
+			 comp_close();
+		} else {
+			 	pop_close_comp();
+		 }
+	});
+	
+	function set_pop_path(kind){
+		this.pop_locat = kind;
+	}
+
+	function get_pop_path(){
+		return pop_locat;
+	}
+
+	function comp_close(){
+		pop_close_comp();
+		location.href="/";
+	}
 
 	//pop_close
 	function pop_close(){
 		$('#pop_alert').css('display','none');
 	}
+
+function	pop_close_comp(){
+	$('#complete_alert').css('display','none');
+}
 </script>

@@ -1254,7 +1254,7 @@ dl.wr_private_agree dd textarea {padding:1.1em .7em; font-size:.7em}
 #claimWrap .claim_contents .app_box dd.app img {width:4em}
 #claimWrap .claim_contents .app_box dd + dd {margin-top:2.5em}
 #claimWrap .claim_contents .app_box dd + dd h1 {margin-bottom:1em}
-.bo_view_con img { width:100%; height:auto;!important}
+.bo_view_con img { width:100%; height:auto !important}
 }
 
 
@@ -1271,7 +1271,7 @@ dl.wr_private_agree dd textarea {padding:1.1em .7em; font-size:.7em}
 .tbl_wrap.tbl_dog .btn_join.off a {color:#bcbcbc; cursor:default}
 .tbl_wrap.tbl_dog .btn_more a {color:#fff}
 .tbl_wrap.tbl_dog .join_letter span {display:inline-block; position:relative; font-size:1em; font-weight:400}
-.tbl_wrap.tbl_dog:last-child {text-align:center; padding:4px; 0px 4px 40px;}
+.tbl_wrap.tbl_dog:last-child {text-align:center; padding:4px 0px 4px 40px;}
 
 
 .tbl_wrap.tbl_cat td  li {display:table; float:left; width:99%;  height:73px; text-align:center;  border-collapse:separate; box-sizing:border-box; border-radius:5px; transition:.3s}
@@ -1284,7 +1284,7 @@ dl.wr_private_agree dd textarea {padding:1.1em .7em; font-size:.7em}
 .tbl_wrap.tbl_cat .btn_join.off a {color:#bcbcbc; cursor:default}
 .tbl_wrap.tbl_cat .btn_more a {color:#fff}
 .tbl_wrap.tbl_cat .join_letter span {display:inline-block; position:relative; font-size:1em; font-weight:400}
-.tbl_wrap.tbl_cat.untable td{ width:100%; padding:4px; 0px 4px 40px;}
+.tbl_wrap.tbl_cat.untable td{ width:100%; padding:4px 0px 4px 40px;}
 
 .ins_terms_download li {vertical-align:middle;/* text-align:left; */font-family:'Noto Sans Korean', Dotum, sans-serif;font-weight:400;display:inline-block;outline-style:none; }
 
@@ -1301,7 +1301,7 @@ dl.wr_private_agree dd textarea {padding:1.1em .7em; font-size:.7em}
 .tbl_wrap.tbl_dog .btn_join.off a {color:#bcbcbc; cursor:default}
 .tbl_wrap.tbl_dog .btn_more a {color:#fff}
 .tbl_wrap.tbl_dog .join_letter span {display:inline-block; position:relative; font-size:1em; font-weight:400}
-.tbl_wrap.tbl_dog.untable td{text-align:center; padding:4px; 0px 4px 0px;}
+.tbl_wrap.tbl_dog.untable td{text-align:center; padding:4px 0px 4px 0px;}
 
 
 .tbl_wrap.tbl_cat td  li {display:table; float:left; width:99.9%;  height:73px; text-align:center;  border-collapse:separate; box-sizing:border-box; border-radius:5px; transition:.3s}
@@ -1314,7 +1314,7 @@ dl.wr_private_agree dd textarea {padding:1.1em .7em; font-size:.7em}
 .tbl_wrap.tbl_cat .btn_join.off a {color:#bcbcbc; cursor:default}
 .tbl_wrap.tbl_cat .btn_more a {color:#fff}
 .tbl_wrap.tbl_cat .join_letter span {display:inline-block; position:relative; font-size:1em; font-weight:400}
-.tbl_wrap.tbl_cat td{text-align:center; width:100%; padding:4px; 0px 4px 40px;}
+.tbl_wrap.tbl_cat td{text-align:center; width:100%; padding:4px 0px 4px 40px;}
 }
 
 /*191128 퀵메뉴 이벤트 추가 시작*/

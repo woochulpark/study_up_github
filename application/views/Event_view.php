@@ -26,7 +26,7 @@
                 <td><input type="text" name="insustock" id="insustock"></td>
             </tr>
             <tr>
-                <td colspan="4">개인정보수집 동의합니다. <input type="checkbox"></td>
+                <td colspan="4">개인정보수집 동의합니다. <input type="checkbox" name="eventconf" id="eventconf" value="Y"></td>
             </tr>               
         </tbody>
     </table>
@@ -36,7 +36,14 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $('#eventsub').on('click',function(){
-                
+            var petname = $('#pname');
+            var petbirth = $('#pbirth');
+            var mastername = $('#mname');
+            var masterhp = $('#mhp');
+            var joininsu = $('#jinsu option:selected');
+            var joinstock = $('#insustock');
+            var chkconfirm = $("#eventconf option:checked");
+            alert(chkconfirm.val());
         });
     });
 </script>

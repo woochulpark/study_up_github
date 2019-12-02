@@ -182,7 +182,8 @@ document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path
 							<li class="<?=($main_chk  != '0' && $main_chk  == "Noti")?'active':'';?>">
 								<a href="/Noti">새소식</a>
 							</li>
-							<?/*
+							<?php
+							/*
 							<li class="">
 								<a href="/qna/list.php">Q&amp;A</a>
 							</li>*/?>
@@ -221,7 +222,7 @@ document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path
 						<a><span>커뮤니티</span><var></var></a>
 						<ul class="submenu">
 							<li><a href="/Noti"><span>새소식</span></a></li>
-							<?/*<li><a href="/qna/list.php"><span>Q&A</span></a></li>*/?>
+							<?php /*<li><a href="/qna/list.php"><span>Q&A</span></a></li>*/ ?>
 							<li><a href="/Faq"><span>FAQ</span></a></li>
 						</ul>
 					</li>

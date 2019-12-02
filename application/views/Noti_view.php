@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 
 	<ul class="bo_news_list">
-	<?	
+	<?php	
 						if($listcnt['curpage'] < 2){
 							$wr_cnt  = $listcnt['total'];
 						} else {
@@ -46,7 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 			</a>
 		</li>
-		<?
+		<?php
 						  $wr_cnt --;
 							} //end foreach
 						} else {
@@ -68,11 +68,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</li>
 	*/?>
 		<li style="height:120px;"></li>
-		<?
+		<?php
 						}
 		?>
 	</ul>
-	<?/*
+	<?php /*
 	<div class="bo_btn_list">
 		<div class="btn_bo_user">
 			<button class="btn_b01 bo_btn">선택삭제</button>
@@ -96,7 +96,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 </div>
 */?>
-	<?
+	<?php
 			foreach($pagin as $k=>$v){
 				echo $v;
 			}

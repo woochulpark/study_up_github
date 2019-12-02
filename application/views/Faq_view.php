@@ -35,7 +35,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="faq_contents">		
 		
 		<div id="faq_petsafe" class="faq_con" >
-			<? 
+			<?php 
+				if(isset($db)){
 								foreach($db as $k => $v ){																			
 						?>
 			<dl <?=($k < 1) ? 'class="active"' : '';?>>
@@ -49,7 +50,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</p>
 				</dd>
 			</dl>
-			<?
+			<?php
+								}
 						}
 						/*
 			<dl>
@@ -184,7 +186,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 		
 		<div id="faq_petpermint" class="faq_con" >
-			<? 
+			<?php 
+			if(isset($meritz)){
 								foreach($meritz as $k => $v ){																			
 						?>
 			<dl <?=($k < 1)? 'class="active"' : '';?>>
@@ -198,7 +201,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</p>
 				</dd>
 			</dl>
-			<?
+			<?php
+								}
 						}
 						/*
 			<dl>
@@ -251,7 +255,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		
 			
 <div id="faq_ipet" class="faq_con">
-				<? 
+				<?php 
+				if(isset($samsung)){
 								foreach($samsung as $k => $v ){																			
 						?>
 			<dl <?=($k < 1)? 'class="active"' : '';?>>
@@ -265,7 +270,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</p>
 				</dd>
 			</dl>
-			<?
+			<?php
+								}
 				}
 			/*
 			<dl>

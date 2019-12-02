@@ -1,3 +1,6 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
 <!doctype html>
 <html lang="ko">
 <head>
@@ -54,12 +57,14 @@
 <?php
 	$main_chk = $this->uri->segment(1,0);
 	
+	/*
 	if($main_chk < 1){
 		$main_chk = '';
 	}
+	*/
 ?>
 <body>
-<?
+<?php
 if($main_chk == ''){
 ?>
 <div id="pop_event" style="display:none">
@@ -151,10 +156,8 @@ document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path
 		 function isMobile() {
   return navigator.userAgent.indexOf('Mobi') > -1;
 }
-
-
 	</script>
-	<?
+	<?php
 } // event팝업 191129
 		?>
 <div id="wrap">

@@ -46,7 +46,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="scroll_box">
 		<span>SCROLL</span>
 	</div>
-<?php/*
+<?php
+/*
 	<div id="sideQuick">
 		<ul>
 			<!--191101수정{-->
@@ -71,7 +72,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</li>
 		</ul>
 	</div>
-*/?>
+*/
+?>
 	<div id="fullpage">
 		<!--SECTION 01-->
 		<div class="section section01">
@@ -194,8 +196,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												</label>												
 											</div>
 										</li>
-										<?php/*
-										<li class="chk_dog_size">
+										<?php
+										/*<li class="chk_dog_size">
 											<span>반려견 종류</span>
 											<div class="chk_wrap">
 												<label><input type="radio" id="" name="dog_size" >
@@ -208,8 +210,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													<em></em><var>소형견</var>
 												</label>
 											</div>											
-										</li>
-										*/?>
+										</li>	*/
+										?>
 									</ul>
 									<div class="btn_submit" onclick="javascript:submit_pet();">반려동물 보험 보장내용 조회</div>
 								</form>
@@ -280,7 +282,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</div>
 						</div>
 					</li>
-					<?/*
+					<?php
+					/*
 					<li class="sel_petsize">
 						<div class="sel_vir_con">
 							<div class="sel_con_inner">
@@ -350,22 +353,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 					
 					<div class="faq_list faq_list1 active"">
-						<? 
+						<?PHP 
+						
+							if(isset($db)){
 								foreach($db as $k => $v ){																			
 						?>
-						<dl <?=($k < 1) ? 'class="active"' : '';?>>
+						<dl <?php=($k < 1) ? 'class="active"' : '';?>>
 							<dt>	
 								<var><b>Q.</b><?=$v['q_content']?></var>
 								<span></span>
 							</dt>
 							<dd>
 								<p>
-								<?=nl2br($v['a_content'])?>
+								<?php=nl2br($v['a_content'])?>
 								</p>
 							</dd>
 						</dl>
-						<?
+						<?php
 							}
+					}
 						/*
 						<dl>
 							<dt>
@@ -407,7 +413,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						?>
 					</div>
 					<div class="faq_list faq_list2">
-						<? 
+						<?php 
+							if(isset($meritz)){
 								foreach($meritz as $k => $v ){																			
 						?>
 						<dl <?=($k < 1)? 'class="active"' : '';?>>
@@ -421,8 +428,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</p>
 							</dd>
 						</dl>
-						<?
+						<?php
 							}
+						}
 						/*
 						<dl>
 							<dt>
@@ -463,7 +471,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						*/?>
 					</div>
 					<div class="faq_list faq_list3">
-						<? 
+						<?php 
+							if(isset($samsung)){
 								foreach($samsung as $k => $v ){																			
 						?>
 						<dl <?=($k < 1)? 'class="active"' : '';?>>					
@@ -477,11 +486,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</p>
 							</dd>
 						</dl>
-						<?
+						<?php
 								}
-									
+						}
 						?>
-						<?/*
+						<?php
+						/*
 						<dl>
 							<dt>
 								<var><b>Q.</b>보상청구 절차는 어떻게 되나요?</var>
@@ -526,13 +536,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="insured bo_box" >
 					<h2>가입현황<!--a class="more_btn">MORE 〉</a--></h2>
 					<ul id="insu_list">
-						<?
-							
+						<?php
+							if(isset($list_join_rand)){
 								foreach($list_join_rand as $k=>$v){
 						?>
 						<li><a><?=$v?></a></li>
-						<?
+						<?php
 							}
+				}
 						/*
 						<li><a>[가입완료] 마르티스 / 8세 / 총보험료 월 45,000 원</a></li>
 						<li><a>[가입완료] 마르티스 / 8세 / 총보험료 월 45,000 원</a></li>
@@ -544,12 +555,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="news bo_box">
 					<h2>새소식<a href="/Noti" class="more_btn">MORE 〉</a></h2>
 					<ul>
-						<? 
+						<?php 
+								if(isset($noti)){
 								foreach($noti as $k => $v ){																			
 						?>
 						<li><a href="/Noti/Detail/<?=$v['srno']?>"><?=$v['title']?></a><span class="date"><?=date("Y.m.d",strtotime(substr($v['regdate'],0,10)));?></span></li>
-						<?
+						<?php
 								}
+						}
 							/*
 						<li><a>[아이펫] 조회만해도 애견용품을 드려요!</a><span class="date">2019.10.01</span></li>
 						<li><a>[아이펫] 조회만해도 애견용품을 드려요!</a><span class="date">2019.10.01</span></li>

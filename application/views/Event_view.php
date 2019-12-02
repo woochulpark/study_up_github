@@ -143,7 +143,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	//form 필수값 체크
 	$('.btn_submit').click(function(){
-		var regPhone = /(01[0|1|6|9|7])[-](\d{3}|\d{4})[-](\d{4}$)/g;
+		//var regPhone = /(01[0|1|6|9|7])[-](\d{3}|\d{4})[-](\d{4}$)/g;
+		var regPhone = /(01[0|1|6|9|7])(\d{3}|\d{4})(\d{4}$)/g; // '-'삭제 검수
 		var regBirth = /^(19[0-9][0-9]|20\d{2})(0[0-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])$/;
 		var frmError =0;
 		if ($("[name=pet_name]").val() == "")

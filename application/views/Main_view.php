@@ -46,7 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="scroll_box">
 		<span>SCROLL</span>
 	</div>
-<?/*
+<?php/*
 	<div id="sideQuick">
 		<ul>
 			<!--191101수정{-->
@@ -194,7 +194,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												</label>												
 											</div>
 										</li>
-										<?/*
+										<?php/*
 										<li class="chk_dog_size">
 											<span>반려견 종류</span>
 											<div class="chk_wrap">

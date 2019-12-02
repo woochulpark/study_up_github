@@ -59,7 +59,104 @@
 	}
 ?>
 <body>
+<?
+if($main_chk == ''){
+?>
+<div id="pop_event" style="display:none">
+		<div class="bg"></div>
+		<div class="pop_con">
+			<div class="pop_con_inner">
+				<img src="/img/event/pop_open_event.jpg" class="pc_img"/>
+				<img src="/img/event/m_pop_open_event.jpg" class="m_img"/>
+				<div class="pop_btn">
+					<a href="/Event">이벤트 참여하기</a>
+				</div>
+				<div class="pop_foot">
+					<button class="allday_close">하루 동안 팝업 띄우지 않기</button>
+					<button class="pop_close"></button>
+				</div>
+			</div>
+		</div>
+	</div>
 
+	<!--모바일 하단 이벤트 배너-->
+	<div id="bot_event_banner" class="m_show" style="display:none">
+		<dl class="left">
+			<dt><img src="/img/logo_white.png" class="ipet"/></dt>
+			<dd>OPEN<br>EVENT</dd>
+		</dl>
+		<a href="/Event">GO</a>
+		<dl class="right">
+			<dd>스타벅스<br>커피쿠폰</dd>
+			<dt><img src="/img/event/img_coffee.png" class="coffee"/></dt>
+		</dl>
+		<div class="banner_x"></div>
+	</div>
+	
+	<script>
+		var dayclose=false;
+
+		$('#pop_event .pop_close').click(function(){
+			$('#pop_event').css('display','none');
+			
+			if(get_dayclose()){
+				 setCookie('startb_event','OK', '24');
+			}
+		});	
+
+		$('#bot_event_banner .banner_x').click(function(){
+			$('#bot_event_banner').css('display','none');
+				if(get_dayclose()){
+					setCookie('startb_event','OK', '24');
+				}
+		});	
+
+		var noticeCookie = getCookie("startb_event");  // 쿠기 가져오기
+		if (noticeCookie != "OK"){                
+			// 팝업창 띄우기
+				if(!isMobile()){
+					$('#pop_event').css('display','table');
+				} else {
+					$('#bot_event_banner').css('display','table');
+				}
+
+		}
+
+		$('.allday_close').on('click',function(){
+			set_dayclose();
+		});
+		
+		function set_dayclose(){
+			this.dayclose = true;
+		}
+
+		function get_dayclose(){
+			return dayclose;
+		}
+
+		function getCookie(name) {
+		var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+		return value? value[2] : null;
+		};
+
+		function setCookie (name, value, exp) {
+var date = new Date();
+date.setTime(date.getTime() + exp*24*60*60*1000);
+document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+};
+
+
+
+
+		 function isMobile() {
+  return navigator.userAgent.indexOf('Mobi') > -1;
+}
+
+
+	</script>
+	<?
+} // event팝업 191129
+		?>
 <div id="wrap">
 
 	<header id="header" class="<?=( $main_chk != '') ?"sub_hd":"";?>">
@@ -132,6 +229,15 @@
 		<!--191111 추가{-->
 	<div id="sideQuick">
 		<ul>
+		<!--191128 퀵메뉴 이벤트 시작-->
+			<li class="event">
+				<a href="/Event">
+					<img src="/img/event/img_coffee2.png"/>
+					<h1>커피쿠폰</h1>
+					<h2>OPEN EVENT</h2>
+				</a>
+			</li>
+			<!--191128 퀵메뉴 이벤트 끝-->
 			<li class="tel">
 				<a href="tel:1670-9010">
 					<img src="/img/icon_tel.png"/>

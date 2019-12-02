@@ -63,9 +63,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<input type="text" placeholder="보험사 선택" class="frm_input sel_btn" readonly name="insurance"/>
 						<ul class="sel_option">
 							<li>보험사 선택</li>
-							<li>DB손해 보험</li>
-							<li>삼성화재</li>
-							<li>메리츠</li>
+							<li>DB손해 보험 펫세이프</li>
+							<li>삼성화재 애니펫보험</li>
+							<li>메리츠화재 펫퍼민트</li>
 						</ul>
 						<var class="sel_arr"></var>
 					</div>

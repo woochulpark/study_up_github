@@ -162,12 +162,12 @@ document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path
 		?>
 <div id="wrap">
 
-	<header id="header" class="<?=( $main_chk != '') ?"sub_hd":"";?>">
+	<header id="header" class="<?=($main_chk  != '0' &&  $main_chk != '') ?"sub_hd":"";?>">
 		<div class="hd_inner">
 			<h1 class="logo"><a href="/"><img src="/img/logo.png"/></a></h1>
 			<ul class="menu">
-				<li class="<?=($main_chk  == "Story")?'active':'';?>"><a href="/Story">ipet 스토리</a></li>
-				<li class="<?=($main_chk  == "Product")?'active':'';?>">
+				<li class="<?=($main_chk  != '0' && $main_chk  == "Story")?'active':'';?>"><a href="/Story">ipet 스토리</a></li>
+				<li class="<?=($main_chk  != '0' && $main_chk  == "Product")?'active':'';?>">
 					<a href="/Product/Db_petsafe">ipet 반려동물 보험</a>
 					<ul class="submenu">
 						<li><a href="/Product/Db_petsafe">DB손해보험 펫세이프</a></li>
@@ -176,17 +176,17 @@ document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path
 						<li><a href="/Product/Claim">보험금 청구 안내</a></li>
 					</ul>
 				</li>
-				<li class="last <?=($main_chk  == "Noti" || $main_chk  == "Faq")?'active':'';?>">
+				<li class="last <?=(($main_chk  == "Noti" || $main_chk  == "Faq") && $main_chk  != '0')?'active':'';?>">
 						<a href="/Noti">커뮤니티</a>
 						<ul class="submenu">
-							<li class="<?=($main_chk  == "Noti")?'active':'';?>">
+							<li class="<?=($main_chk  != '0' && $main_chk  == "Noti")?'active':'';?>">
 								<a href="/Noti">새소식</a>
 							</li>
 							<?/*
 							<li class="">
 								<a href="/qna/list.php">Q&amp;A</a>
 							</li>*/?>
-							<li class="<?=($main_chk  == "Faq")?'active':'';?>">
+							<li class="<?=($main_chk  != '0' && $main_chk  == "Faq")?'active':'';?>">
 								<a href="/Faq">FAQ</a>
 							</li>
 					</ul>

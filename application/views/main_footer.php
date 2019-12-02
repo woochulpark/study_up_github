@@ -1,6 +1,6 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
 
-
-	<?php 
 	
 	$main_chk = $this->uri->segment(1,0);
 
@@ -48,7 +48,9 @@
 			</div>
 		</div>
 	</footer>
-	<?php }?>
+	<?php 
+			}
+		?>
 <div><!--} wrap end-->
 <form name="page_move" action="" method="POST">
 		<input type="hidden" name="page" />
@@ -101,9 +103,7 @@ closeen = $("#petbirth").datepicker({
 			monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],					
 			
 			maxDate : new Date(today),				
-		});	
-
-		
+		});			
 
 		$('#insu_list').bxSlider({
 			mode: 'vertical',
@@ -116,8 +116,7 @@ closeen = $("#petbirth").datepicker({
 			infiniteLoop:true,
 				speed:500,
 				responsive:true
-		  });
-		
+		  });		
 
 		if(!isMobile()){
 				$('.tel').children('a').attr('href','#none');
@@ -133,11 +132,12 @@ closeen = $("#petbirth").datepicker({
 	});
 	
 <?php
-if($main_chk != "main" && $main_chk != ''){?>
+if($main_chk != "main" && $main_chk != ''){
+	?>
 		 function isMobile() {
   return navigator.userAgent.indexOf('Mobi') > -1;
 }
-<?
+<?php
 }
 	?>
 

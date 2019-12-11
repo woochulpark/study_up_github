@@ -358,14 +358,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							if(isset($db)){
 								foreach($db as $k => $v ){																			
 						?>
-						<dl <?php=($k < 1) ? 'class="active"' : '';?>>
+						<dl <?php echo ($k < 1)?"class=\'active\'" : '';?> >
 							<dt>	
 								<var><b>Q.</b><?=$v['q_content']?></var>
 								<span></span>
 							</dt>
 							<dd>
 								<p>
-								<?php=nl2br($v['a_content'])?>
+								<?=nl2br($v['a_content'])?>
 								</p>
 							</dd>
 						</dl>
